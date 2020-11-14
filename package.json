@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "storybook": "start-storybook -p 6006 --no-dll",
+    "build-storybook": "build-storybook --no-dll"
   },
   "keywords": [],
   "author": "",
@@ -13,8 +15,13 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/react": "^6.0.28",
     "babel-loader": "^8.2.1",
-    "webpack": "^5.4.0",
+    "react-is": "^17.0.1",
+    "webpack": "4.x.x",
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
