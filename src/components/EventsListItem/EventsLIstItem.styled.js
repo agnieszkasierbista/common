@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {Link} from "react-router-dom";
 
 export const StyledEvent = styled.div`
   display: grid;
@@ -10,7 +9,7 @@ export const StyledEvent = styled.div`
   background: ${(props) => `linear-gradient(${props.theme.colors.c2} 50%, ${props.theme.colors.c1})`};
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.div`
   grid-column-start: 2;
   margin-right: 5px;
 `;

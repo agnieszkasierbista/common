@@ -9,6 +9,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    optimization: {
+        nodeEnv: 'none',
+        minimize: false
+    },
     module: {
         rules: [
             {

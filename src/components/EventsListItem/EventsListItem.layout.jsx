@@ -11,28 +11,30 @@ import {Calendar} from "../common/Calendar/Calendar.layout";
 import {Clock} from "../common/Clock/Clock.layout";
 import {AlertCircle} from "../common/AlertCircle/AlertCircle.layout";
 
-export function EventsListItem({event, theme, from, renderRemove}) {
+export function EventsListItem({event, theme, from, renderRemove, Link}) {
 
     return (
         <>
-            <StyledLink to={`/details/${event.creationDate}`}>
-                <StyledListDetails>
-                    {
-                        event.color !== "blue"
-                            ? <AlertCircle color={event.color}/>
-                            : null
-                    }
+            <StyledLink>
+                <Link to={`/details/${event.creationDate}`}>
+                    <StyledListDetails>
+                        {
+                            event.color !== "blue"
+                                ? <AlertCircle color={event.color}/>
+                                : null
+                        }
 
-                    <Bookmark
-                        color={event.bookmarkColor}
-                    />
-                    <StyledDateAndTime>
-                        {event.date ? <><Calendar color={theme.colors.c4}/> {event.date}</> : null}
-                        {" "}
-                        {event.time ? <><Clock color={theme.colors.c4}/> {event.time}</> : null}
-                    </StyledDateAndTime>
-                </StyledListDetails>
-                <StyledEventData>{event.title}</StyledEventData>
+                        <Bookmark
+                            color={event.bookmarkColor}
+                        />
+                        <StyledDateAndTime>
+                            {event.date ? <><Calendar color={theme.colors.c4}/> {event.date}</> : null}
+                            {" "}
+                            {event.time ? <><Clock color={theme.colors.c4}/> {event.time}</> : null}
+                        </StyledDateAndTime>
+                    </StyledListDetails>
+                    <StyledEventData>{event.title}</StyledEventData>
+                </Link>
             </StyledLink>
             <StyledRemoveContainer>
                 {renderRemove(from, event.creationDate)}

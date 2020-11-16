@@ -1,7 +1,7 @@
 import React from "react";
 
-import Component from "./components/Component.layout.jsx";
+import { EventsListItem } from "./components/EventsListItem/EventsListItem.layout.jsx";
 
 export {
-    Component
+    EventsListItem
 }
