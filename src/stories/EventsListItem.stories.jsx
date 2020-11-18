@@ -21,6 +21,7 @@ const Template = (args) => {
                 style={{ width: 400 }}
                 theme={args.theme}>
             <EventsListItem
+                Link={({children}) => <div>{children}</div>}
                 event={args.event}
                 theme={args.theme}
                 from="RemovedEventsList"
