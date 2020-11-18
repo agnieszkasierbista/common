@@ -1,5 +1,5 @@
 import React from 'react';
-import {EventsListItem} from "../components/EventsListItem/EventsListItem.layout";
+import {EventsListItem} from "../components/EventsListItem/EventsListItem.layout.jsx";
 import {BrowserRouter as Router} from "react-router-dom";
 import {StyledEvent} from "../components/EventsListItem/EventsLIstItem.styled";
 

@@ -6,10 +6,10 @@ import {
     StyledListDetails,
     StyledRemoveContainer
 } from "./EventsLIstItem.styled";
-import {Bookmark} from "../common/Bookmark/Bookmark.layout";
-import {Calendar} from "../common/Calendar/Calendar.layout";
-import {Clock} from "../common/Clock/Clock.layout";
-import {AlertCircle} from "../common/AlertCircle/AlertCircle.layout";
+import {Bookmark} from "../icons/Bookmark/Bookmark.layout";
+import {Calendar} from "../icons/Calendar/Calendar.layout";
+import {Clock} from "../icons/Clock/Clock.layout";
+import {AlertCircle} from "../icons/AlertCircle/AlertCircle.layout";
 
 export function EventsListItem({event, theme, from, renderRemove, Link}) {
 
