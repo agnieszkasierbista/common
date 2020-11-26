@@ -21,6 +21,7 @@ const Template = (args) => {
                 style={{ width: 400 }}
                 theme={args.theme}>
             <EventsListItem
+                to={args.to}
                 Link={({children}) => <div>{children}</div>}
                 event={args.event}
                 theme={args.theme}
@@ -49,7 +50,8 @@ Standard.args = {
         title: 'title',
         time: '22:56',
         date: '2020-11-18',
-        creationDate: 1605466397120
+        creationDate: 1605466397120,
+        to: `/details/1605466397120`
     },
     theme: {colors: {c2: 'lightyellow', c1: 'red', c4: 'aqua'}}
 };

@@ -11,12 +11,12 @@ import {Calendar} from "../icons/Calendar/Calendar.layout";
 import {Clock} from "../icons/Clock/Clock.layout";
 import {AlertCircle} from "../icons/AlertCircle/AlertCircle.layout";
 
-export function EventsListItem({event, theme, from, renderRemove, Link}) {
+export function EventsListItem({event, theme, from, renderRemove, Link, to}) {
 
     return (
         <>
             <StyledLink>
-                <Link to={`/details/${event.creationDate}`}>
+                <Link to={to}>
                     <StyledListDetails>
                         {
                             event.color !== "blue"
