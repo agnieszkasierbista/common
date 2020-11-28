@@ -10,7 +10,9 @@ export default {
         dispatchToggleInfoBoxVisibility: {},
         text: {},
         positiveAction: {},
-        positiveActionLabel: {}
+        positiveActionLabel: {},
+        negativeAction: {},
+        negativeActionLabel: {}
     },
 };
 
@@ -23,6 +25,8 @@ const Template = (args) => {
             text={args.text}
             positiveAction={args.positiveAction}
             positiveActionLabel={args.positiveActionLabel}
+            negativeAction={args.negativeAction}
+            negativeActionLabel={args.negativeActionLabel}
         />
     )
 };
@@ -39,6 +43,8 @@ Standard.args = {
         </>
     ),
     positiveAction: () => console.log("action!"),
-    positiveActionLabel: "Remove"
+    positiveActionLabel: "Remove",
+    negativeAction: () => console.log("negative action!"),
+    negativeActionLabel: "Cancel"
 };
 

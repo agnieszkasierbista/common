@@ -3,7 +3,17 @@ import {StyledCloseButton, StyledContent, StyledInfoBox, StyledOverlay} from "./
 import xIconPath from "bootstrap-icons/icons/x-square.svg";
 
 
-export function InfoBox({isVisible, dispatchToggleInfoBoxVisibility, text, positiveAction, positiveActionLabel}) {
+export function InfoBox(
+    {
+        isVisible,
+        dispatchToggleInfoBoxVisibility,
+        text,
+        positiveAction,
+        positiveActionLabel,
+        negativeAction,
+        negativeActionLabel
+    }
+) {
 
     return (
         isVisible
@@ -34,12 +44,34 @@ export function InfoBox({isVisible, dispatchToggleInfoBoxVisibility, text, posit
                                     positiveAction
                                         ? (
                                             <button
-                                                onClick={positiveAction}
+                                                onClick={function (event) {
+
+                                                    event.stopPropagation();
+
+                                                    positiveAction(event);
+                                                }}
                                             >
                                                 {positiveActionLabel}
                                             </button>
                                         )
-                                        : "NIE"
+                                        : null
+                                }
+
+                                {
+                                    negativeAction
+                                        ? (
+                                            <button
+                                                onClick={function (event) {
+
+                                                    event.stopPropagation();
+
+                                                    negativeAction(event);
+                                                }}
+                                            >
+                                                {negativeActionLabel}
+                                            </button>
+                                        )
+                                        : null
                                 }
                             </div>
 
