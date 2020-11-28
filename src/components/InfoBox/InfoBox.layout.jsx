@@ -3,7 +3,7 @@ import {StyledCloseButton, StyledContent, StyledInfoBox, StyledOverlay} from "./
 import xIconPath from "bootstrap-icons/icons/x-square.svg";
 
 
-export function InfoBox({isVisible, dispatchToggleInfoBoxVisibility}) {
+export function InfoBox({isVisible, dispatchToggleInfoBoxVisibility, text, positiveAction, positiveActionLabel}) {
 
     return (
         isVisible
@@ -18,7 +18,7 @@ export function InfoBox({isVisible, dispatchToggleInfoBoxVisibility}) {
                             width="35"
                             height="35"
                             title="Bootstrap"
-                            onClick={function(event) {
+                            onClick={function (event) {
 
                                 event.stopPropagation();
 
@@ -27,8 +27,21 @@ export function InfoBox({isVisible, dispatchToggleInfoBoxVisibility}) {
                         />
                         <StyledContent>
 
-                            <span>To create a new list, enter the list name and a password.</span>
-                            <p>To join an existing list, provide the list name and the correct password.</p>
+                            {text}
+
+                            <div>
+                                {
+                                    positiveAction
+                                        ? (
+                                            <button
+                                                onClick={positiveAction}
+                                            >
+                                                {positiveActionLabel}
+                                            </button>
+                                        )
+                                        : "NIE"
+                                }
+                            </div>
 
                         </StyledContent>
                     </StyledInfoBox>

@@ -7,7 +7,10 @@ export default {
     component: InfoBox,
     argTypes: {
         isVisible: {},
-        dispatchToggleInfoBoxVisibility: {}
+        dispatchToggleInfoBoxVisibility: {},
+        text: {},
+        positiveAction: {},
+        positiveActionLabel: {}
     },
 };
 
@@ -17,14 +20,25 @@ const Template = (args) => {
         <InfoBox
             isVisible={args.isVisible}
             dispatchToggleInfoBoxVisibility={args.dispatchToggleInfoBoxVisibility}
+            text={args.text}
+            positiveAction={args.positiveAction}
+            positiveActionLabel={args.positiveActionLabel}
         />
-    );
+    )
 };
 
 export const Standard = Template;
 
 Standard.args = {
     isVisible: true,
-    dispatchToggleInfoBoxVisibility: () => console.log("clicked")
+    dispatchToggleInfoBoxVisibility: () => console.log("clicked"),
+    text: (
+        <>
+            <span>To create a new list, enter the list name and a password.</span>
+            <p>To join an existing list, provide the list name and the correct password.</p>
+        </>
+    ),
+    positiveAction: () => console.log("action!"),
+    positiveActionLabel: "Remove"
 };
 
