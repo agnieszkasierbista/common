@@ -1,5 +1,5 @@
 import React from "react";
-import {StyledCloseButton, StyledContent, StyledInfoBox, StyledOverlay} from "./InfoBox.styled";
+import {StyledButtonsContainer, StyledCloseButton, StyledContent, StyledInfoBox, StyledOverlay} from "./InfoBox.styled";
 import xIconPath from "bootstrap-icons/icons/x-square.svg";
 
 
@@ -8,10 +8,8 @@ export function InfoBox(
         isVisible,
         dispatchToggleInfoBoxVisibility,
         text,
-        positiveAction,
-        positiveActionLabel,
-        negativeAction,
-        negativeActionLabel
+        maxActionsWrapperWidth,
+        actions
     }
 ) {
 
@@ -39,43 +37,28 @@ export function InfoBox(
 
                             {text}
 
-                            <div>
-                                {
-                                    positiveAction
-                                        ? (
-                                            <button
-                                                onClick={function (event) {
-
-                                                    event.stopPropagation();
-
-                                                    positiveAction(event);
-                                                }}
-                                            >
-                                                {positiveActionLabel}
-                                            </button>
-                                        )
-                                        : null
-                                }
-
-                                {
-                                    negativeAction
-                                        ? (
-                                            <button
-                                                onClick={function (event) {
-
-                                                    event.stopPropagation();
-
-                                                    negativeAction(event);
-                                                }}
-                                            >
-                                                {negativeActionLabel}
-                                            </button>
-                                        )
-                                        : null
-                                }
-                            </div>
-
                         </StyledContent>
+
+                        <StyledButtonsContainer maxWidth={maxActionsWrapperWidth}>
+
+                            {actions.map(({action, label}) => {
+                                return (
+                                    <button
+                                        key={label}
+                                        onClick={function (event) {
+
+                                            event.stopPropagation();
+
+                                            action(event);
+
+                                        }}
+                                    >
+                                        {label}
+                                    </button>
+                                )
+                            })}
+                        </StyledButtonsContainer>
+
                     </StyledInfoBox>
                 </StyledOverlay>
             )

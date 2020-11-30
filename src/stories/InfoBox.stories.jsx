@@ -9,10 +9,7 @@ export default {
         isVisible: {},
         dispatchToggleInfoBoxVisibility: {},
         text: {},
-        positiveAction: {},
-        positiveActionLabel: {},
-        negativeAction: {},
-        negativeActionLabel: {}
+        maxActionsWrapperWidth: {}
     },
 };
 
@@ -20,13 +17,11 @@ const Template = (args) => {
 
     return (
         <InfoBox
+            actions={args.actions}
             isVisible={args.isVisible}
             dispatchToggleInfoBoxVisibility={args.dispatchToggleInfoBoxVisibility}
             text={args.text}
-            positiveAction={args.positiveAction}
-            positiveActionLabel={args.positiveActionLabel}
-            negativeAction={args.negativeAction}
-            negativeActionLabel={args.negativeActionLabel}
+            maxActionsWrapperWidth={args.maxActionsWrapperWidth}
         />
     )
 };
@@ -42,9 +37,10 @@ Standard.args = {
             <p>To join an existing list, provide the list name and the correct password.</p>
         </>
     ),
-    positiveAction: () => console.log("action!"),
-    positiveActionLabel: "Remove",
-    negativeAction: () => console.log("negative action!"),
-    negativeActionLabel: "Cancel"
+    actions: [
+        {action: () => console.log("A"), label: "button A"},
+        {action: () => console.log("B"), label: "button B"}
+        ],
+    maxActionsWrapperWidth: "200px"
 };
 

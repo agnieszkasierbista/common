@@ -38,3 +38,10 @@ export const StyledCloseButton = styled(StyledImg)`
   margin: 4px;
   flex-shrink: 0;
 `;
+
+export const StyledButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: ${(props) => props.maxWidth};
+`;
