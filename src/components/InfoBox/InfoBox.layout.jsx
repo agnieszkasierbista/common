@@ -1,5 +1,13 @@
 import React from "react";
-import {StyledButtonsContainer, StyledCloseButton, StyledContent, StyledInfoBox, StyledOverlay} from "./InfoBox.styled";
+import {
+    StyledButton,
+    StyledButtonsContainer,
+    StyledButtonsContainerWrapper,
+    StyledCloseButton,
+    StyledContent,
+    StyledInfoBox,
+    StyledOverlay
+} from "./InfoBox.styled";
 import xIconPath from "bootstrap-icons/icons/x-square.svg";
 
 
@@ -8,7 +16,7 @@ export function InfoBox(
         isVisible,
         dispatchToggleInfoBoxVisibility,
         text,
-        maxActionsWrapperWidth,
+        actionsWrapperWidth,
         actions
     }
 ) {
@@ -39,25 +47,27 @@ export function InfoBox(
 
                         </StyledContent>
 
-                        <StyledButtonsContainer maxWidth={maxActionsWrapperWidth}>
+                        <StyledButtonsContainerWrapper>
+                            <StyledButtonsContainer width={actionsWrapperWidth}>
 
-                            {actions.map(({action, label}) => {
-                                return (
-                                    <button
-                                        key={label}
-                                        onClick={function (event) {
+                                {actions.map(({action, label}) => {
+                                    return (
+                                        <StyledButton
+                                            key={label}
+                                            onClick={function (event) {
 
-                                            event.stopPropagation();
+                                                event.stopPropagation();
 
-                                            action(event);
+                                                action(event);
 
-                                        }}
-                                    >
-                                        {label}
-                                    </button>
-                                )
-                            })}
-                        </StyledButtonsContainer>
+                                            }}
+                                        >
+                                            {label}
+                                        </StyledButton>
+                                    )
+                                })}
+                            </StyledButtonsContainer>
+                        </StyledButtonsContainerWrapper>
 
                     </StyledInfoBox>
                 </StyledOverlay>

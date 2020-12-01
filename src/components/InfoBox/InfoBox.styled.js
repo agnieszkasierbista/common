@@ -33,6 +33,7 @@ export const StyledOverlay = styled.div`
 export const StyledImg = styled.img`
 `;
 
+//TODO: take from client2 project
 export const StyledCloseButton = styled(StyledImg)`
   align-self: flex-end;
   margin: 4px;
@@ -43,5 +44,23 @@ export const StyledButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  max-width: ${(props) => props.maxWidth};
+  width: ${(props) => props.width || "60%"};
+  padding: 15px;
+`;
+
+export const StyledButtonsContainerWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+//TODO: take from client2 project
+export const StyledButton = styled.button`
+  border: 2px solid black;
+  font-size: 23px;
+  padding: 4px 10px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: white;
+  outline: none;
 `;

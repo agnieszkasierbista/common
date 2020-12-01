@@ -9,7 +9,7 @@ export default {
         isVisible: {},
         dispatchToggleInfoBoxVisibility: {},
         text: {},
-        maxActionsWrapperWidth: {}
+        actionsWrapperWidth: {}
     },
 };
 
@@ -21,7 +21,7 @@ const Template = (args) => {
             isVisible={args.isVisible}
             dispatchToggleInfoBoxVisibility={args.dispatchToggleInfoBoxVisibility}
             text={args.text}
-            maxActionsWrapperWidth={args.maxActionsWrapperWidth}
+            actionsWrapperWidth={args.actionsWrapperWidth}
         />
     )
 };
@@ -41,6 +41,6 @@ Standard.args = {
         {action: () => console.log("A"), label: "button A"},
         {action: () => console.log("B"), label: "button B"}
         ],
-    maxActionsWrapperWidth: "200px"
+    actionsWrapperWidth: "300px"
 };
 
