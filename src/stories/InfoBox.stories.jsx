@@ -1,6 +1,6 @@
 import React from 'react';
 import {InfoBox} from "../components/InfoBox/InfoBox.layout";
-
+import {css} from "styled-components";
 
 export default {
     title: 'InfoBox',
@@ -17,11 +17,13 @@ const Template = (args) => {
 
     return (
         <InfoBox
+            cancelButtonStyles={css`background: red; border-radius: 4px`}
             actions={args.actions}
             isVisible={args.isVisible}
             dispatchToggleInfoBoxVisibility={args.dispatchToggleInfoBoxVisibility}
             text={args.text}
             actionsWrapperWidth={args.actionsWrapperWidth}
+            containerStyles={css`border-radius: 0; border: 1px solid blue; background: yellow`}
         />
     )
 };
@@ -38,7 +40,7 @@ Standard.args = {
         </>
     ),
     actions: [
-        {action: () => console.log("A"), label: "button A"},
+        {action: () => console.log("A"), label: "button A", styles: css`background: magenta`},
         {action: () => console.log("B"), label: "button B"}
         ],
     actionsWrapperWidth: "300px"

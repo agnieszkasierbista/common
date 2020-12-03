@@ -13,6 +13,7 @@ export const StyledInfoBox = styled.div`
   box-shadow: 6px 6px 10px dimgrey;
   overflow: auto;
   max-height: 85%;
+  ${(props) => props.containerStyles};
 `;
 
 export const StyledContent = styled.div`
@@ -38,6 +39,7 @@ export const StyledCloseButton = styled(StyledImg)`
   align-self: flex-end;
   margin: 4px;
   flex-shrink: 0;
+  ${(props) => props.cancelButtonStyles};
 `;
 
 export const StyledButtonsContainer = styled.div`
@@ -63,4 +65,5 @@ export const StyledButton = styled.button`
   border-radius: 4px;
   background-color: white;
   outline: none;
+  ${(props) => props.styles};
 `;

@@ -17,7 +17,9 @@ export function InfoBox(
         dispatchToggleInfoBoxVisibility,
         text,
         actionsWrapperWidth,
-        actions
+        actions,
+        containerStyles,
+        cancelButtonStyles
     }
 ) {
 
@@ -27,8 +29,11 @@ export function InfoBox(
                 <StyledOverlay
                     onClick={dispatchToggleInfoBoxVisibility}
                 >
-                    <StyledInfoBox>
+                    <StyledInfoBox
+                        containerStyles={containerStyles}
+                    >
                         <StyledCloseButton
+                            cancelButtonStyles={cancelButtonStyles}
                             src={xIconPath}
                             alt=""
                             width="35"
@@ -50,9 +55,10 @@ export function InfoBox(
                         <StyledButtonsContainerWrapper>
                             <StyledButtonsContainer width={actionsWrapperWidth}>
 
-                                {actions.map(({action, label}) => {
+                                {actions.map(({action, label, styles}) => {
                                     return (
                                         <StyledButton
+                                            styles={styles}
                                             key={label}
                                             onClick={function (event) {
 
