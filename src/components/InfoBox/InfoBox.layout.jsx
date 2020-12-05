@@ -3,12 +3,12 @@ import {
     StyledButton,
     StyledButtonsContainer,
     StyledButtonsContainerWrapper,
-    StyledCloseButton,
     StyledContent,
     StyledInfoBox,
     StyledOverlay
 } from "./InfoBox.styled";
 import xIconPath from "bootstrap-icons/icons/x-square.svg";
+import {StyledCloseButton} from "../CancelButton/CancelButton.styled";
 
 
 export function InfoBox(

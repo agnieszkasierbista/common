@@ -34,14 +34,6 @@ export const StyledOverlay = styled.div`
 export const StyledImg = styled.img`
 `;
 
-//TODO: take from client2 project
-export const StyledCloseButton = styled(StyledImg)`
-  align-self: flex-end;
-  margin: 4px;
-  flex-shrink: 0;
-  ${(props) => props.cancelButtonStyles};
-`;
-
 export const StyledButtonsContainer = styled.div`
   display: flex;
   align-items: center;

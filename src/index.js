@@ -8,6 +8,7 @@ import {ClipboardChecked} from "./components/icons/ClipboardChecked/ClipboardChe
 import {Clock} from "./components/icons/Clock/Clock.layout";
 import {FilePlus} from "./components/icons/FilePlus/FilePlus.layout";
 import {Trash} from "./components/icons/Trash/Trash.layout";
+import {StyledCloseButton as CancelButton} from "./components/CancelButton/CancelButton.styled"
 
 export {
     EventsListItem,
@@ -17,5 +18,6 @@ export {
     ClipboardChecked,
     Clock,
     FilePlus,
-    Trash
+    Trash,
+    CancelButton
 }
