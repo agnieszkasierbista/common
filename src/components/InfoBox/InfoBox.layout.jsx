@@ -1,6 +1,5 @@
 import React from "react";
 import {
-    StyledButton,
     StyledButtonsContainer,
     StyledButtonsContainerWrapper,
     StyledContent,
@@ -9,6 +8,7 @@ import {
 } from "./InfoBox.styled";
 import xIconPath from "bootstrap-icons/icons/x-square.svg";
 import {StyledCloseButton} from "../CancelButton/CancelButton.styled";
+import {StyledButton} from "../Button/Button.styled";
 
 
 export function InfoBox(
