@@ -55,7 +55,7 @@ export function InfoBox(
                         <StyledButtonsContainerWrapper>
                             <StyledButtonsContainer width={actionsWrapperWidth}>
 
-                                {actions.map(({action, label, styles}) => {
+                                {(actions || []).map(({action, label, styles}) => {
                                     return (
                                         <StyledButton
                                             styles={styles}
