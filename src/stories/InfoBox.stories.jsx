@@ -17,6 +17,7 @@ const Template = (args) => {
 
     return (
         <InfoBox
+            CancelButton={args.CancelButton}
             cancelButtonStyles={css`background: red; border-radius: 4px`}
             actions={args.actions}
             isVisible={args.isVisible}
@@ -28,9 +29,10 @@ const Template = (args) => {
     )
 };
 
-export const Standard = Template;
+export const Standard = Template.bind({});
+export const CustomButtonVariant = Template.bind({});
 
-Standard.args = {
+const args = {
     isVisible: true,
     dispatchToggleInfoBoxVisibility: () => console.log("clicked"),
     text: (
@@ -42,7 +44,15 @@ Standard.args = {
     actions: [
         {action: () => console.log("A"), label: "button A", styles: css`background: magenta`},
         {action: () => console.log("B"), label: "button B"}
-        ],
+    ],
     actionsWrapperWidth: "300px"
 };
+
+Standard.args = args;
+
+CustomButtonVariant.args = {
+    ...args,
+    CancelButton: () => <button>x</button>
+};
+
 

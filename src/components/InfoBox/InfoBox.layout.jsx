@@ -19,9 +19,12 @@ export function InfoBox(
         actionsWrapperWidth,
         actions,
         containerStyles,
+        CancelButton,
         cancelButtonStyles
     }
 ) {
+
+    const Close = CancelButton || StyledCloseButton;
 
     return (
         isVisible
@@ -32,13 +35,12 @@ export function InfoBox(
                     <StyledInfoBox
                         containerStyles={containerStyles}
                     >
-                        <StyledCloseButton
+                        <Close
                             cancelButtonStyles={cancelButtonStyles}
                             src={xIconPath}
                             alt=""
                             width="35"
                             height="35"
-                            title="Bootstrap"
                             onClick={function (event) {
 
                                 event.stopPropagation();
