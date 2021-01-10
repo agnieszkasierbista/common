@@ -18,6 +18,9 @@ export const StyledDateAndTime = styled.div`
   grid-column-start: 3;
   text-align: right;
   font-size: 16px;
+  grid-template-columns: 75% 25%;
+  column-gap: 4px;
+  display: grid; 
 `;
 
 export const StyledListDetails = styled.div`

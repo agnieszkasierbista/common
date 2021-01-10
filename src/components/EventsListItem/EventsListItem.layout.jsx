@@ -28,9 +28,8 @@ export function EventsListItem({event, theme, from, renderRemove, Link, to}) {
                             color={event.bookmarkColor}
                         />
                         <StyledDateAndTime>
-                            {event.date ? <><Calendar color={theme.colors.c4}/> {event.date}</> : null}
-                            {" "}
-                            {event.time ? <><Clock color={theme.colors.c4}/> {event.time}</> : null}
+                            {event.date ? <div><Calendar color={theme.colors.c4}/> {event.date}</div> : null}
+                            {event.time ? <div><Clock color={theme.colors.c4}/> {event.time}</div> : null}
                         </StyledDateAndTime>
                     </StyledListDetails>
                     <StyledEventData>{event.title}</StyledEventData>
