@@ -12,6 +12,7 @@ export const StyledEvent = styled.div`
 export const StyledLink = styled.div`
   grid-column-start: 2;
   margin-right: 5px;
+  ${(props) => props.linkStyles};
 `;
 
 export const StyledDateAndTime = styled.div`

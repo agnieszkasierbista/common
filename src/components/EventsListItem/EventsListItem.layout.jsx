@@ -11,11 +11,12 @@ import {Calendar} from "../icons/Calendar/Calendar.layout";
 import {Clock} from "../icons/Clock/Clock.layout";
 import {AlertCircle} from "../icons/AlertCircle/AlertCircle.layout";
 
-export function EventsListItem({event, theme, from, renderRemove, Link, to}) {
+export function EventsListItem({event, theme, from, renderRemove, Link, to, linkStyles}) {
 
     return (
         <>
-            <StyledLink>
+            <StyledLink
+                linkStyles={linkStyles}>
                 <Link to={to}>
                     <StyledListDetails>
                         {
