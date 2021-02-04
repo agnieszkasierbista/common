@@ -19,12 +19,7 @@ export function EventsListItem({event, theme, from, renderRemove, Link, to, link
                 linkStyles={linkStyles}>
                 <Link to={to}>
                     <StyledListDetails>
-                        {
-                            event.color !== "blue"
-                                ? <AlertCircle color={event.color}/>
-                                : null
-                        }
-
+                        <AlertCircle color={event.color}/>
                         <Bookmark
                             color={event.bookmarkColor}
                         />
