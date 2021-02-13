@@ -15,7 +15,7 @@ export function InfoBox(
     {
         isVisible,
         dispatchToggleInfoBoxVisibility,
-        text,
+        content,
         actionsWrapperWidth,
         actions,
         containerStyles,
@@ -50,7 +50,7 @@ export function InfoBox(
                         />
                         <StyledContent>
 
-                            {text}
+                            {content}
 
                         </StyledContent>
 

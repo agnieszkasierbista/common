@@ -8,7 +8,7 @@ export default {
     argTypes: {
         isVisible: {},
         dispatchToggleInfoBoxVisibility: {},
-        text: {},
+        content: {},
         actionsWrapperWidth: {}
     },
 };
@@ -22,7 +22,7 @@ const Template = (args) => {
             actions={args.actions}
             isVisible={args.isVisible}
             dispatchToggleInfoBoxVisibility={args.dispatchToggleInfoBoxVisibility}
-            text={args.text}
+            content={args.content}
             actionsWrapperWidth={args.actionsWrapperWidth}
             containerStyles={css`border-radius: 0; border: 1px solid blue; background: yellow`}
         />
@@ -35,7 +35,7 @@ export const CustomButtonVariant = Template.bind({});
 const args = {
     isVisible: true,
     dispatchToggleInfoBoxVisibility: () => console.log("clicked"),
-    text: (
+    content: (
         <>
             <span>To create a new list, enter the list name and a password.</span>
             <p>To join an existing list, provide the list name and the correct password.</p>
